@@ -1,0 +1,56 @@
+@page {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.1;
+    margin: 0px;
+    margin-left: 3px;
+    padding: 0px;
+}
+
+section {
+    width: 100%;
+}
+
+.header {
+    font-size: 10vw;
+}
+
+.subheader {
+    font-size: 8vw;
+}
+
+.price {
+    font-size: 10vw;
+    font-weight: bold;
+}
+
+.attributes {
+    font-size: 7vw;
+}
+
+.exp {
+    font-size: 6vw;
+    font-weight: normal;
+    display: inline;
+}
+
+@media only screen and (min-width: 101px) {
+    .exp {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 100px) {
+    .exp {
+        display: inline;
+    }
+}
