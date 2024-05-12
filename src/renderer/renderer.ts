@@ -90,6 +90,7 @@ async function renderDataToHTML(event, arg) {
                     applyElementStyles(barcodeWrapperEl,arg.line.style)
                 }else{
                     //barcodeWrapperEl.style.display = 'flex';
+                    // barcodeWrapperEl.style.textAlign = 'left';
                     barcodeWrapperEl.style.textAlign = 'center';
                     // barcodeWrapperEl.style.position = 'absolute';
                     // barcodeWrapperEl.style.bottom = '0';
@@ -100,13 +101,15 @@ async function renderDataToHTML(event, arg) {
                     lineColor: "#000",
                     margin: 0,
                     marginTop: 1,
+                    marginLeft: 1,
+                    marginRight: 2,
                     textMargin: -2,
                     fontOptions: 'bold',
                     fontSize: arg.line.fontsize || 12,
                     width: parseInt(arg.line.width) || 4,
                     height: parseInt(arg.line.height) || 40,
                     displayValue: !!arg.line.displayValue,
-                    textAlign: 'center'
+                    // textAlign: 'center'
                 });
                 // send
                 event.sender.send('render-line-reply', {status: true, error: null});
