@@ -82,7 +82,7 @@ export class PosPrinter {
                 (mainWindow as any) = null;
             });
 
-            mainWindow.loadFile(options.pathTemplate || join(__dirname, "renderer/index.html"));
+            mainWindow.loadFile(options.leftSpace == null ? join(__dirname, "renderer/index.html") : join(__dirname, "renderer/indexWithSpace.html"));
 
             mainWindow.webContents.on('did-finish-load', async () => {
                 // get system printers
@@ -93,6 +93,16 @@ export class PosPrinter {
                 //     reject(new Error(options.printerName + ' not found. Check if this printer was added to your computer or try updating your drivers').toString());
                 //     return;
                 // }
+
+                if (typeof options.pageSize == "object" && options.leftSpace) {
+                    mainWindow.webContents.insertCSS(`
+                        body {
+                            width: ${options.leftSpace ? `${100 - ((options.leftSpace / (options?.pageSize?.width ?? 1)) * 100)}%` : '100%'};
+                            padding-left: ${options.leftSpace ? `${((options.leftSpace / (options?.pageSize?.width ?? 1)) * 100)}% !important` : '0%'};
+                        }
+                    `);
+                }
+                
                 // else start initialize render process page
                 await sendIpcMsg('body-init', mainWindow.webContents, options);
                 /**

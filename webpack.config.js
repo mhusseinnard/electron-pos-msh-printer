@@ -71,8 +71,12 @@ module.exports = [
                 title: 'Print Previews-------',
                 template: 'src/renderer/index.html'
             }),
-            new MiniCssExtractPlugin({
-                filename:"[name].min.css"})
+            new HtmlWebpackPlugin({
+                title: 'Print HTML Page',
+                filename: 'indexWithSpace.html',
+                template: 'src/renderer/indexWithSpace.html'
+            }),
+            new MiniCssExtractPlugin({filename:"[name].min.css"})
         ],
     })
 ];

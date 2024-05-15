@@ -81,6 +81,7 @@ async function renderDataToHTML(event, arg) {
         case 'barCode':
             try {
                 const barcodeWrapperEl = document.createElement('div')
+                barcodeWrapperEl.classList.add('leftSide');
                 const barcodeEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
                 barcodeEl.setAttributeNS(null, 'id', `barCode-${arg.lineIndex}`);
                 barcodeWrapperEl.appendChild(barcodeEl)
@@ -101,8 +102,8 @@ async function renderDataToHTML(event, arg) {
                     lineColor: "#000",
                     margin: 0,
                     marginTop: 1,
-                    marginLeft: 1,
-                    marginRight: 2,
+                    marginLeft: arg.line.style.marginBarcodeLeft ? arg.line.style.marginBarcodeLeft : 1,
+                    marginRight: arg.line.style.marginBarcodeRight ? arg.line.style.marginBarcodeRight : 2,
                     textMargin: -2,
                     fontOptions: 'bold',
                     fontSize: arg.line.fontsize || 12,

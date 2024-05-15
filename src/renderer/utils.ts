@@ -15,7 +15,7 @@ export function generatePageText(arg) {
     const text = arg.value;
     let div = document.createElement('div') as HTMLElement;
     div.innerHTML = text;
-    // div = applyElementStyles(div, arg.style) as HTMLElement;
+    div = applyElementStyles(div, arg.style) as HTMLElement;
     if (arg.className) {
         div.classList.add(arg.className);
     }
