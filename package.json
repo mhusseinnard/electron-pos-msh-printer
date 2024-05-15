@@ -1,7 +1,7 @@
 {
-  "name": "electron-pos-printer",
-  "version": "1.3.6",
-  "description": "Electron printer plugin for 80mm, 78mm, 76mm, 58mm, 57mm, 44mm printers",
+  "name": "electron-pos-msh-printer",
+  "version": "1.0.0",
+  "description": "Electron printer plugin for various paper sizes in mm printers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,28 +15,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hubertformin/electron-pos-printer.git"
+    "url": "git+https://github.com/mhusseinnard/electron-pos-msh-printer"
   },
   "keywords": [
     "electron",
     "printer",
     "thermal",
-    "pos"
+    "pos",
+    "esc command"
   ],
   "author": {
-    "name": "Hubert Formin",
-    "email": "hformin@gmail.com"
+    "name": "Mohammed Hussein",
+    "email": "m.hussein@nardpos.com"
   },
-  "contributors": [
-    "Sidnei Pacheco <sidnei.pacheco@seuguru.com.br>",
-    "Ulisses Constantini <ulisses@parseint.com.br>",
-    "Famous Ketoma <git+https://github.com/jfamousket>"
-  ],
+  "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hubertformin/electron-pos-printer/issues"
+    "url": "https://github.com/mhusseinnard/electron-pos-msh-printer/issues"
   },
-  "homepage": "https://github.com/Hubertformin/electron-pos-printer#readme",
+  "homepage": "https://github.com/mhusseinnard/electron-pos-msh-printer",
   "dependencies": {
     "jsbarcode": "^3.11.5",
     "qrcode": "^1.5.1"
