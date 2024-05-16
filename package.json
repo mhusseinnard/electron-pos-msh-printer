@@ -1,6 +1,6 @@
 {
   "name": "electron-pos-msh-printer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Electron printer plugin for various paper sizes in mm printers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
