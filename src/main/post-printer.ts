@@ -7,7 +7,7 @@ import {join} from "path";
 import {convertPixelsToMicrons, parsePaperSize, parsePaperSizeInMicrons, sendIpcMsg} from "./utils";
 
 if ((process as any).type == 'renderer') {
-    throw new Error('electron-pos-printer: use remote.require("electron-pos-printer") in the render process');
+    throw new Error('electron-pos-msh-printer: use remote.require("electron-pos-msh-printer") in the render process');
 }
 
 /**

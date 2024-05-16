@@ -20,7 +20,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 First fork and clone the repo:
 ````bash
-git clone git@github.com:your-username/electron-pos-printer.git
+git clone git@github.com:your-username/electron-pos-msh-printer.git
 ````
 
 Then run ``npm install`` to set everything up. 
